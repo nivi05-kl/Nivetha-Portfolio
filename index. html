@@ -1,1 +1,426 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nivetha | Computer Science & Engineering Student</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f8f9fa;
+        }
+
+        /* Navigation */
+        nav {
+            background: #ffffff;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1f3c88;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #1f3c88;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: #eef3fb;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+            color: #172b4d;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            color: #1f3c88;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: #555;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: #1f3c88;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #14295f;
+        }
+
+        /* Sections */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #172b4d;
+            margin-bottom: 40px;
+        }
+
+        /* About */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            color: #555;
+            font-size: 17px;
+        }
+
+        /* Education */
+        .education-card {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .education-card h3 {
+            color: #1f3c88;
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        /* Skills */
+        .skills {
+            background: #f8f9fa;
+        }
+
+        .skills-container {
+            max-width: 850px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
+
+        .skill {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid #e1e5eb;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .skill h3 {
+            color: #1f3c88;
+            font-size: 18px;
+        }
+
+        /* Career Objective */
+        .objective {
+            background: white;
+        }
+
+        .objective-box {
+            max-width: 850px;
+            margin: auto;
+            padding: 30px;
+            background: #eef3fb;
+            border-left: 4px solid #1f3c88;
+            color: #444;
+            font-size: 17px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #172b4d;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            margin: 8px 0;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #101d34;
+            color: #bbb;
+            text-align: center;
+            padding: 18px;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Nivetha</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#objective">Career</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Home -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Hi, I'm Nivetha</h1>
+
+            <h2>Computer Science & Engineering Student</h2>
+
+            <p>
+                A motivated Computer Science and Engineering student
+                interested in learning technology, developing technical skills,
+                and building practical solutions through programming.
+            </p>
+
+            <a href="#contact" class="btn">Contact Me</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+
+            <p>
+                I am a Computer Science and Engineering student with an
+                interest in technology and software development. I am
+                continuously improving my programming and problem-solving
+                skills through academic learning and practical exploration.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-card">
+
+            <h3>Bachelor of Engineering – Computer Science and Engineering</h3>
+
+            <p><strong>Government College of Technology, Coimbatore</strong></p>
+
+            <p>Currently pursuing – 2nd Year</p>
+
+            <p>Expected Graduation: 2029</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <h3>C Programming</h3>
+            </div>
+
+            <div class="skill">
+                <h3>Java</h3>
+            </div>
+
+            <div class="skill">
+                <h3>Data Structures</h3>
+            </div>
+
+            <div class="skill">
+                <h3>Object-Oriented Programming</h3>
+            </div>
+
+            <div class="skill">
+                <h3>HTML & CSS</h3>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+            </div>
+
+            <div class="skill">
+                <h3>Problem Solving</h3>
+            </div>
+
+            <div class="skill">
+                <h3>Git & GitHub</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Career Objective -->
+    <section class="objective" id="objective">
+
+        <h2 class="section-title">Career Objective</h2>
+
+        <div class="objective-box">
+
+            <p>
+                To build a strong career in the field of Computer Science by
+                continuously developing my technical knowledge, problem-solving
+                abilities, and practical skills, while contributing to meaningful
+                software projects and gaining industry experience.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">Contact</h2>
+
+        <p>Email:
+            <a href="mailto:nivilakshu05@gmail.com">
+                nivilakshu05@gmail.com
+            </a>
+        </p>
+
+        <p>Location: Coimbatore, Tamil Nadu, India</p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Nivetha. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>
